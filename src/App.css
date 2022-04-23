@@ -6,8 +6,11 @@
 }
 
 .App {
-	padding: 2rem 5rem;
+	padding: 1rem 4rem;
 	min-height: 100vh;
+	background-image: url('https://images.hdqwalls.com/wallpapers/tesla-roadster-charging-qw.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% auto;
 }
 
 nav {
@@ -20,10 +23,32 @@ nav {
 .cart {
 	display: flex;
 	align-items: center;
-	gap: 3rem;
-	font-size: 1rem;
+	font-size: 1.2rem;
+	font-weight: 600;
 }
 
 .link {
 	text-decoration: none;
+	padding: 0.6rem 1.8rem;
+	border-radius: 16px;
+	color: #2e3537;
+	transition: 0.5s;
+}
+
+.link:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo {
+	text-decoration: none;
+	font-size: 1.6rem;
+	letter-spacing: 10px;
+	color: #2e3537;
+	font-weight: bold;
 }

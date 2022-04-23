@@ -1,22 +1,22 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-	faHome,
-	faBagShopping,
-	faHeart,
-} from '@fortawesome/free-solid-svg-icons'
+import { faBagShopping } from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = () => {
 	return (
 		<nav>
-			<div className='logo'>Logo</div>
+			<div className='logo-container'>
+				<Link className='logo' to='/'>
+					TESLA
+				</Link>
+			</div>
 			<div className='navbar'>
 				<Link className='link' to='/'>
-					<FontAwesomeIcon icon={faHome} />
+					Home
 				</Link>
-				<Link className='link' to='/products'>
-					Products
+				<Link className='link' to='/shop'>
+					Shop
 				</Link>
 				<Link className='link' to='/about'>
 					About
@@ -27,9 +27,6 @@ const Navbar = () => {
 			</div>
 
 			<div className='cart'>
-				<Link className='link' to='/favorites'>
-					<FontAwesomeIcon icon={faHeart} />
-				</Link>
 				<Link className='link' to='/shopping-cart'>
 					<FontAwesomeIcon icon={faBagShopping} />
 				</Link>
