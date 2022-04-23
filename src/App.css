@@ -6,7 +6,7 @@
 }
 
 .App {
-	padding: 1rem 3rem;
+	padding: 2rem 5rem;
 	min-height: 100vh;
 }
 
@@ -14,11 +14,16 @@ nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: 3rem;
 }
 
-.navbar {
+.navbar,
+.cart {
 	display: flex;
 	align-items: center;
-	gap: 1rem;
+	gap: 3rem;
+	font-size: 1rem;
+}
+
+.link {
+	text-decoration: none;
 }
