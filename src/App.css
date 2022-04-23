@@ -145,3 +145,18 @@ nav {
 .faq p {
 	margin-bottom: 1rem;
 }
+
+/* Shop section */
+.shop {
+	padding: 4rem;
+}
+
+.items {
+	display: flex;
+	gap: 2rem;
+}
+
+.info-container {
+	display: flex;
+	gap: 1rem;
+}
