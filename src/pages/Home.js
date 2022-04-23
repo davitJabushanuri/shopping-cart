@@ -14,7 +14,9 @@ const Home = () => {
 				<div className='action-buttons'>
 					<button className='call-to-action black'>CUSTOM ORDER</button>
 					<button className='call-to-action'>
-						<Link to='/shop'>EXISTING INVENTORY</Link>
+						<Link className='link' to='/shop'>
+							EXISTING INVENTORY
+						</Link>
 					</button>
 				</div>
 			</div>

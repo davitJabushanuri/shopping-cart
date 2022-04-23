@@ -8,14 +8,14 @@
 }
 
 .App {
-	padding: 1rem 4rem;
 	min-height: 100vh;
-	background-image: url('https://images.hdqwalls.com/wallpapers/tesla-roadster-charging-qw.jpg');
 	background-repeat: no-repeat;
-	background-size: 100% auto;
+	background-size: 100% 100%;
 }
 
 nav {
+	height: 8vh;
+	padding: 1rem 4rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -57,10 +57,13 @@ nav {
 
 /* Home section */
 .home {
-	margin-top: 10rem;
+	height: calc(100vh - 8vh);
+	background-image: url('https://images.hdqwalls.com/wallpapers/tesla-roadster-charging-qw.jpg');
+	background-size: 100% 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 	gap: 10rem;
 }
 
@@ -125,4 +128,20 @@ nav {
 
 .delivery p {
 	margin-bottom: 5rem;
+}
+
+/* Contact section */
+
+.contact {
+	color: #2e3537;
+	padding-top: 10rem;
+	padding-left: 20rem;
+}
+
+.faq {
+	max-width: 40%;
+}
+
+.faq p {
+	margin-bottom: 1rem;
 }
