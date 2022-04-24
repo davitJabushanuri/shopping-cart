@@ -160,3 +160,23 @@ nav {
 	display: flex;
 	gap: 1rem;
 }
+
+/* Shopping cart section */
+
+.cart {
+	position: relative;
+}
+.shopping-cart-counter {
+	position: absolute;
+	top: 12px;
+	right: 18px;
+	background-color: aqua;
+	border-radius: 50%;
+	width: 16px;
+	height: 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 12px;
+	color: #2e3537;
+}

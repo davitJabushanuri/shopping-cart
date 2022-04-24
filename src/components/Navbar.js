@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import cartContext from '../Helpers/cartContext'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBagShopping } from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = () => {
+	const { cart } = useContext(cartContext)
 	return (
 		<nav>
 			<div className='logo-container'>
@@ -30,6 +32,9 @@ const Navbar = () => {
 				<Link className='link' to='/shopping-cart'>
 					<FontAwesomeIcon icon={faBagShopping} />
 				</Link>
+				{cart.length > 0 && (
+					<p className='shopping-cart-counter'>{cart.length}</p>
+				)}
 			</div>
 		</nav>
 	)
