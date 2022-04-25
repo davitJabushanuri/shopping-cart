@@ -153,12 +153,85 @@ nav {
 
 .items {
 	display: flex;
+	justify-content: center;
 	gap: 2rem;
+	flex-wrap: wrap;
+}
+
+.item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 1px solid #dcdddd;
+	padding-bottom: 1rem;
+	border-radius: 10px;
+	gap: 1rem;
+}
+
+.model {
+	height: 60px;
+	width: 400px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.img-container {
+	width: 400px;
+	height: auto;
+}
+
+.car-image {
+	display: block;
+	max-width: 100%;
 }
 
 .info-container {
 	display: flex;
-	gap: 1rem;
+	padding: 1rem 1rem;
+	justify-content: space-between;
+	width: 400px;
+	align-items: center;
+}
+.info-container > * {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.specs {
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+
+.description {
+	font-size: 12px;
+}
+
+.price-container {
+	display: flex;
+	align-items: center;
+	height: 40px;
+}
+
+.price {
+	font-size: 1.4rem;
+	font-weight: 600;
+}
+
+.add-to-cart {
+	width: 380px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	color: white;
+	background-color: #03a561;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 1.2rem;
+	font-weight: 600;
 }
 
 /* Shopping cart section */
