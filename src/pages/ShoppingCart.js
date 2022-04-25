@@ -3,8 +3,13 @@ import cartContext from '../Helpers/cartContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
-const ShoppingCart = ({ quantity }) => {
+const ShoppingCart = ({ quantity = 1 }) => {
 	const { cart, setCart } = useContext(cartContext)
+
+	const handleDelete = carId => {
+		setCart(x => x.filter(car => car.id !== carId))
+		console.log(cart)
+	}
 
 	return (
 		<div className='shopping-cart'>
@@ -29,7 +34,10 @@ const ShoppingCart = ({ quantity }) => {
 										</span>
 									</div>
 								</div>
-								<button className='delete'>
+								<button
+									onClick={() => handleDelete(item.id)}
+									className='delete'
+								>
 									<FontAwesomeIcon className='delete-icon' icon={faTrash} />
 								</button>
 							</div>
