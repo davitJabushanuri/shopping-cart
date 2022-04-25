@@ -30,7 +30,11 @@ const ShoppingCart = ({ quantity = 1 }) => {
 
 	return (
 		<div className='cart-container'>
-			{cart.length > 0 && (
+			{cart.length < 1 ? (
+				<div>
+					<h1>Your cart is empty</h1>
+				</div>
+			) : (
 				<Cart cart={cart} quantity={quantity} handleDelete={handleDelete} />
 			)}
 			{cart.length > 0 && <Checkout total={total} />}
