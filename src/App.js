@@ -8,13 +8,18 @@ import Navbar from './components/Navbar'
 import Contact from './pages/Contact'
 import ShoppingCart from './pages/ShoppingCart'
 import cartContext from './Helpers/cartContext'
+import carsArray from './Helpers/carsArray'
 
 function App() {
 	const [cart, setCart] = useState([])
+	const [shop, setShop] = useState(carsArray)
+	const [count, setCount] = useState(0)
 
 	return (
 		<div className='App'>
-			<cartContext.Provider value={{ cart, setCart }}>
+			<cartContext.Provider
+				value={{ cart, setCart, shop, setShop, count, setCount }}
+			>
 				<Navbar />
 				<Routes>
 					<Route path='/' element={<Home />} />

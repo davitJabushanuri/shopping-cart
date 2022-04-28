@@ -3,9 +3,10 @@ import cartContext from '../Helpers/cartContext'
 
 import Checkout from '../components/Checkout'
 import Cart from '../components/Cart'
+import carsArray from '../Helpers/carsArray'
 
-const ShoppingCart = ({ quantity = 1 }) => {
-	const { cart, setCart } = useContext(cartContext)
+const ShoppingCart = () => {
+	const { cart, setCart, count, setCount, setShop } = useContext(cartContext)
 	const [total, setTotal] = useState(0)
 	const [message, setMessage] = useState('Your cart is empty')
 
@@ -16,9 +17,8 @@ const ShoppingCart = ({ quantity = 1 }) => {
 	const getTotal = arr => {
 		let x = 0
 		for (let i = 0; i < arr.length; i++) {
-			x += arr[i].price
+			x += arr[i].price * arr[i].quantity
 		}
-
 		return x
 	}
 
@@ -26,14 +26,15 @@ const ShoppingCart = ({ quantity = 1 }) => {
 		setMessage('Thanks for your order!')
 		setCart([])
 		setTotal(0)
+		setCount(0)
+		setShop([...carsArray])
 	}
 
 	useEffect(() => {
 		if (cart.length > 0) {
 			setTotal(getTotal(cart))
-			console.log(total)
 		}
-	}, [cart])
+	}, [count])
 
 	return (
 		<div className='cart-container'>
@@ -42,10 +43,10 @@ const ShoppingCart = ({ quantity = 1 }) => {
 					<h1>{message}</h1>
 				</div>
 			) : (
-				<Cart cart={cart} quantity={quantity} handleDelete={handleDelete} />
+				<Cart cart={cart} setCart={setCart} handleDelete={handleDelete} />
 			)}
 			{cart.length > 0 && (
-				<Checkout total={total} handleSubmit={handleSubmit} />
+				<Checkout total={total} cart={cart} handleSubmit={handleSubmit} />
 			)}
 		</div>
 	)

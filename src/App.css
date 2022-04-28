@@ -428,3 +428,22 @@ nav {
 	cursor: pointer;
 	border-radius: 5px;
 }
+
+.quantity-container {
+	display: flex;
+	gap: 0.6rem;
+	align-items: center;
+}
+
+.quantity-container button {
+	height: 22px;
+	width: 22px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background-color: #22a0e9;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+}
