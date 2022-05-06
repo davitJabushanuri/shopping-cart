@@ -1,0 +1,48 @@
+const carsArray = [
+	{
+		model: 'Model S',
+		price: 40000,
+		topSpeed: '200',
+		hp: '1020',
+		range: '396',
+		acceleration: '1.99',
+		img: 'https://carwow-uk-wp-3.imgix.net/Front-Shot-47.jpg?auto=format&cs=tinysrgb&fit=clip&ixlib=rb-1.1.0&q=60&w=1125',
+		id: 1,
+		quantity: 1,
+	},
+	{
+		model: 'Model 3',
+		price: 40000,
+		topSpeed: '160',
+		hp: '670',
+		range: '358',
+		acceleration: '3.1',
+		img: 'https://carwow-uk-wp-3.imgix.net/tesla-model-3-4.jpg?auto=format&cs=tinysrgb&fit=clip&ixlib=rb-1.1.0&q=60&w=1125',
+		id: 2,
+		quantity: 1,
+	},
+	{
+		model: 'Model X',
+		price: 50000,
+		topSpeed: '200',
+		hp: '1020',
+		range: '333',
+		acceleration: '2.5',
+		img: 'https://carwow-uk-wp-3.imgix.net/Front-Shot-48.jpg?auto=format&cs=tinysrgb&fit=clip&ixlib=rb-1.1.0&q=60&w=1125',
+		id: 3,
+		quantity: 1,
+	},
+	{
+		model: 'Model Y',
+		price: 20000,
+		topSpeed: '100',
+		hp: '470',
+		range: '330',
+		acceleration: '5.4',
+		img: 'https://carwow-uk-wp-3.imgix.net/tesla-model-3-1-1.jpg?auto=format&cs=tinysrgb&fit=clip&ixlib=rb-1.1.0&q=60&w=1125',
+		id: 4,
+		quantity: 1,
+	},
+]
+
+export default carsArray
