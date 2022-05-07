@@ -1,70 +1,130 @@
-# Getting Started with Create React App
+<div align="center">
+  <a href="https://www.theodinproject.com/">
+    <img src="./images/4441966.png" alt="Logo" width="80" height="80">
+  </a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <h3 align="center">Shopping Cart</h3>
+  <p align="center">
+    This is a solution to the <a href='https://www.theodinproject.com/lessons/node-path-javascript-shopping-cart'>challenge on The Odin Project</a>.
+    <br />
+    <br />
+    <a href="https://davitjabushanuri.github.io/shopping-cart/">View Demo</a>
+    ·
+    <a href="https://github.com/davitJabushanuri/shopping-cart/issues">Report Bug</a>
+  </p>
+</div>
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[![Product Name Screen Shot][product-screenshot]](https://davitjabushanuri.github.io/weather-app/)
 
-### `npm run build`
+### Built With
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* [React](https://reactjs.org/)
+* [React Router](https://reactrouter.com/)
+* [Context API](https://reactjs.org/docs/context.html)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+<!-- GETTING STARTED -->
+## Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To get a local copy up and running follow these simple example steps.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerequisites
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* [git](https://git-scm.com/downloads)
+* [NodeJS](https://nodejs.org/en/download/)
+* [npm](https://www.npmjs.com/)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+All of these must be available in your PATH. To verify things are set up properly, you can run this:
+  ```sh
+  git --version
+  node --version
+  npm --version
+  ```
 
-## Learn More
+### Installation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+After you've made sure to have all the tools installed, you should be able to just run a few commands to get set up:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```sh
+   git clone git@github.com:davitJabushanuri/shopping-cart.git
+   cd shopping-cart
+   npm start
+   ```
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+<!-- USAGE EXAMPLES -->
+## Usage
+Simple shopping cart project with useState, useEffect, useContext. On the shop page, you can add products to your cart, change quantity with buttons. if a products is already on your cart error modal will be displayed.
+You can adjust products quantity and delete them from your cart.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<!-- CONTRIBUTING -->
+## Contributing
 
-### Making a Progressive Web App
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Fork the Project
+2. Create your Feature Branch
+3. Commit your Changes
+4. Push to the Branch
+5. Open a Pull Request
 
-### Advanced Configuration
+<!-- LICENSE -->
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-### Deployment
+<!-- CONTACT -->
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Davit Jabushanuri - [@Davit96526599](https://twitter.com/Davit96526599) - davitjabushanuri95@gmail.com
 
-### `npm run build` fails to minify
+Project Link: [https://github.com/davitJabushanuri/weather-app](https://github.com/davitJabushanuri/weather-app)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+
+* [The Odin Project](https://www.theodinproject.com/)
+* [Tesla](https://www.tesla.com/)
+* [Font Awesome](https://fontawesome.com/)
+* [GitHub Pages](https://pages.github.com)
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[product-screenshot]: images/template.png
