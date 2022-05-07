@@ -59,7 +59,7 @@ nav {
 .home {
 	height: calc(100vh - 8vh);
 	background-image: url('https://images.hdqwalls.com/wallpapers/tesla-roadster-charging-qw.jpg');
-	background-size: 100% 100%;
+	background-size: cover;
 	display: flex;
 	flex-direction: column;
 	align-items: center;

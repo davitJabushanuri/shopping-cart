@@ -6,7 +6,7 @@ import Cart from '../components/Cart'
 import carsArray from '../Helpers/carsArray'
 
 const ShoppingCart = () => {
-	const { cart, setCart, count, setCount, setShop } = useContext(cartContext)
+	const { cart, setCart,count, setCount } = useContext(cartContext)
 	const [total, setTotal] = useState(0)
 	const [message, setMessage] = useState('Your cart is empty')
 
@@ -27,7 +27,9 @@ const ShoppingCart = () => {
 		setCart([])
 		setTotal(0)
 		setCount(0)
-		setShop([...carsArray])
+		for (let i = 0; i < carsArray.length; i++) {
+			carsArray[i].quantity = 1
+		}
 	}
 
 	useEffect(() => {
@@ -43,7 +45,7 @@ const ShoppingCart = () => {
 					<h1>{message}</h1>
 				</div>
 			) : (
-				<Cart cart={cart} setCart={setCart} handleDelete={handleDelete} />
+				<Cart cart={cart} setCart={setCart} handleDelete={handleDelete} setCount={setCount} />
 			)}
 			{cart.length > 0 && (
 				<Checkout total={total} cart={cart} handleSubmit={handleSubmit} />

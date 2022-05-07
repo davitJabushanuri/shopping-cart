@@ -4,10 +4,8 @@ import cartContext from '../Helpers/cartContext'
 import ErrorModal from '../components/ErrorModal'
 
 const Shop = () => {
-	const [shop, setShop] = useState(carsArray)
-	const { cart, setCart } = useContext(cartContext)
+	const { cart, setCart, setCount } = useContext(cartContext)
 	const [displayModal, setDisplayModal] = useState(false)
-	const [quantity, setQuantity] = useState(1)
 
 	const addToCart = item => {
 		if (cart.includes(item)) {
@@ -16,22 +14,26 @@ const Shop = () => {
 	}
 
 	const incrementQuantity = item => {
-		
-		setShop(...(shop[shop.indexOf(item)].quantity + 1))
-		setQuantity(prev => prev + 1)
+		const car = carsArray.find(car => car.id === item.id)
+		car.quantity++
+		console.log(car.quantity)
+		setCount(prev => prev + 1)
 		
 	}
 
-	const decrementQuantity = () => {
-		if (quantity === 1) return
-		setQuantity(x => Number(x) - 1)
+	const decrementQuantity = (item) => {
+		const car = carsArray.find(car => car.id === item.id)
+		if(car.quantity === 1) return
+		car.quantity--
+		console.log(car.quantity)
+		setCount(prev => prev + 1)
 	}
 
 	return (
 		<div className='shop'>
 			<div className='items'>
 				{displayModal && <ErrorModal setDisplayModal={setDisplayModal} />}
-				{shop.map(item => {
+				{carsArray.map(item => {
 					return (
 						<div key={item.id} className='item'>
 							<h2 className='model'>{item.model}</h2>
@@ -66,14 +68,9 @@ const Shop = () => {
 								>
 									+
 								</button>
-								<input
-									type='number'
-									name='quantity'
-									id='quantity-input'
-									value={item.quantity}
-									onChange={e => setQuantity(e.target.value)}
-								/>
-								<button onClick={decrementQuantity} className='decrement'>
+								<p id='quantity-input'>Quantity {item.quantity}</p>
+								
+								<button onClick={() => decrementQuantity(item)} className='decrement'>
 									-
 								</button>
 							</div>
